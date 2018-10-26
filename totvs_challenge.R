@@ -10,7 +10,7 @@ library(PRROC)
 ###################
 # Data Correction
 ###################
-data = as.data.table(read_json("~/Downloads/challenge.json", simplifyVector = T))
+data = as.data.table(read_json("./challenge.json", simplifyVector = T))
 
 data[, register_date := as.Date(substr(register_date, 1, 10), format = "%Y-%m-%d")]
 
